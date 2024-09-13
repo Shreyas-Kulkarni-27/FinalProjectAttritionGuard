@@ -17,7 +17,7 @@ def home():
 @app.route('/predict',methods=['POST','GET'])
 def predict():
     file = request.files['file']
-    file.save(os.path.join('C:/Users/SK2712/OneDrive - Cal State Fullerton/Desktop/FinalProj/finalProject', file.filename))
+    file.save(os.path.join('Add File Path here', file.filename))
     df = pd.read_csv(file.filename)
 
     # df['Attrition'].replace('Yes','1',inplace=True)
